@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swapop 12-Month Marketing Roadmap</title>
+    <title>Swapop 9-Month Marketing Roadmap</title>
     
     <!-- أيقونة الموقع (Favicon) -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23facc15'/><text y='50%' x='50%' dotted-anchor='middle' text-anchor='middle' dy='.35em' font-family='sans-serif' font-weight='900' font-size='60' fill='black'>S</text></svg>">
@@ -73,7 +73,6 @@
             color: #94a3b8;
         }
 
-        /* حماية: إخفاء التطبيق افتراضياً */
         #app-container { display: none; }
         
         #lock-screen {
@@ -110,77 +109,53 @@
         </div>
     </div>
 
-    <!-- Background Decoration -->
     <div class="fixed top-0 left-0 w-full h-1 bg-yellow-400 z-50"></div>
 
     <div id="app-container" class="max-w-7xl mx-auto px-4 py-8">
 
-        <!-- Header Section -->
         <header class="mb-12 text-center md:text-right">
             <div class="flex flex-col md:flex-row justify-between items-end md:items-center gap-6">
                 <div>
                     <div class="flex items-center gap-3 mb-4 justify-center md:justify-start">
-                        <div
-                            class="w-12 h-12 bg-black text-yellow-400 font-black flex items-center justify-center rounded-2xl text-2xl shadow-xl shadow-yellow-200/50 rotate-3 hover:rotate-0 transition-transform cursor-pointer">
-                            S</div>
+                        <div class="w-12 h-12 bg-black text-yellow-400 font-black flex items-center justify-center rounded-2xl text-2xl shadow-xl shadow-yellow-200/50 rotate-3 hover:rotate-0 transition-transform cursor-pointer">S</div>
                         <h1 class="text-4xl font-black tracking-tight text-slate-900 italic">Swapop</h1>
                     </div>
-                    <h2 class="text-2xl font-bold text-slate-700">خطة التسويق التنفيذية لـ 12 شهر</h2>
-                    <div
-                        class="flex items-center gap-2 mt-2 text-slate-500 font-medium justify-center md:justify-start">
+                    <h2 class="text-2xl font-bold text-slate-700">خطة التسويق التنفيذية لـ 9 أشهر</h2>
+                    <div class="flex items-center gap-2 mt-2 text-slate-500 font-medium justify-center md:justify-start">
                         <i data-lucide="alert-circle" class="w-4 h-4 text-orange-500"></i>
-                        <span>من مرحلة التأسيس حتى الإطلاق الرسمي الكامل</span>
+                        <span>تعديل الأهداف لتركيز عالٍ على أول 10,000 مستخدم</span>
                     </div>
                 </div>
 
                 <div class="flex gap-3">
-                    <div
-                        class="px-4 py-2 bg-white rounded-xl border border-slate-200 shadow-sm text-sm font-bold flex items-center gap-2">
+                    <div class="px-4 py-2 bg-white rounded-xl border border-slate-200 shadow-sm text-sm font-bold flex items-center gap-2">
                         <div class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></div>
-                        حالة الخطة: معتمدة
+                        حالة الخطة: محدثة
                     </div>
                 </div>
             </div>
         </header>
 
-        <!-- Global KPIs -->
         <div id="global-kpis" class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-12"></div>
 
-        <!-- Interactive Roadmap Layout -->
         <div class="grid lg:grid-cols-12 gap-8 items-start relative">
-
-            <!-- Sidebar Tabs -->
             <div id="sidebar" class="lg:col-span-4 space-y-3 lg:sticky lg:top-8 h-fit"></div>
-
-            <!-- Main Content Area -->
             <div class="lg:col-span-8 w-full">
-                <div
-                    class="bg-white rounded-[2rem] border border-slate-200 shadow-2xl shadow-slate-200/50 overflow-hidden min-h-[600px] flex flex-col transition-all duration-500">
-
-                    <!-- Active Phase Header -->
+                <div class="bg-white rounded-[2rem] border border-slate-200 shadow-2xl shadow-slate-200/50 overflow-hidden min-h-[600px] flex flex-col transition-all duration-500">
                     <div id="phase-header" class="bg-slate-900 p-8 md:p-10 relative overflow-hidden fade-in"></div>
-
-                    <!-- Months Timeline -->
                     <div class="p-6 md:p-10 flex-grow bg-slate-50">
                         <div id="months-container" class="space-y-8 fade-in"></div>
                     </div>
-
-                    <!-- Footer Nav -->
-                    <div id="footer-nav"
-                        class="p-6 bg-white border-t border-slate-100 flex flex-wrap justify-between items-center mt-auto gap-4"></div>
+                    <div id="footer-nav" class="p-6 bg-white border-t border-slate-100 flex flex-wrap justify-between items-center mt-auto gap-4"></div>
                 </div>
             </div>
         </div>
-
     </div>
 
     <script>
-        // دالة التحقق من كلمة السر بطريقة مباشرة لضمان الاستقرار
         function checkPassword() {
             const input = document.getElementById('password-input').value;
             const errorMsg = document.getElementById('error-msg');
-            
-            // كلمة السر الصحيحة
             const validPass = "swapop2026";
 
             if (input === validPass) {
@@ -197,206 +172,122 @@
             if (e.key === 'Enter') checkPassword();
         });
 
-        // Data Structure
         const globalKpis = [
-            { label: "المدة الزمنية", value: "12", suffix: " شهر", icon: "calendar", color: "border-blue-100", textCol: "text-blue-500" },
-            { label: "الهدف النهائي", value: "25,000", suffix: " مستخدم", icon: "users", color: "border-yellow-200", textCol: "text-yellow-500" },
-            { label: "الإطلاق الرسمي", value: "مارس", suffix: " 2026", icon: "rocket", color: "border-emerald-100", textCol: "text-emerald-500" },
-            { label: "استراتيجية النمو", value: "Organic", suffix: " & PR", icon: "trending-up", color: "border-purple-100", textCol: "text-purple-500" }
+            { label: "المدة الزمنية", value: "9", suffix: " أشهر", icon: "calendar", color: "border-blue-100", textCol: "text-blue-500" },
+            { label: "الهدف الجديد", value: "10,000", suffix: " مستخدم", icon: "users", color: "border-yellow-200", textCol: "text-yellow-500" },
+            { label: "كثافة العمل", value: "عالية", suffix: "", icon: "zap", color: "border-emerald-100", textCol: "text-emerald-500" },
+            { label: "النمو المستهدف", value: "Organic", suffix: " Plus", icon: "trending-up", color: "border-purple-100", textCol: "text-purple-500" }
         ];
 
         const phases = [
             {
                 tag: "Phase 01",
-                title: "التموضع، البحث، والريبراندينج",
-                duration: "أبريل — يونيو 2025 (3 أشهر)",
+                title: "التأسيس والتموضع الاستراتيجي",
+                duration: "أبريل — مايو 2025 (شهران)",
                 icon: "search",
-                goal: "فهم السوق بعمق، بناء هوية قوية ومتماسكة، وتحديد المكانة التنافسية قبل أي خطوة للأمام.",
+                goal: "تركيز مكثف على ريبراندينج سريع وأبحاث سوقية دقيقة لبناء أساس صلب للنمو.",
                 months: [
                     {
                         tag: "شهر 1 — أبريل",
-                        title: "أبحاث السوق والمنافسين",
+                        title: "أبحاث السوق والريبراندينج",
                         tasks: [
-                            "تحليل المنافسين المحليين (4swapp، OpenSouq، Facebook Marketplace) — تحديد نقاط الضعف والفجوات.",
-                            "إجراء 15–20 مقابلة مستخدم نوعية (Qualitative Interviews) مع الشرائح الثلاث المستهدفة في مصر.",
-                            "بناء Personas مفصلة للـ Value Hacker، Sustainable Trader، Opportunity Adventurer للسوق المصري.",
-                            "تحليل بيانات السوق المصري للـ resale والمقايضة — حجم، عادات، نقاط الألم الأكثر شيوعاً.",
-                            "دراسة سلوك المستخدم على جروبات الفيسبوك للبيع المستعمل — أكبر جروبات، أكثر المنشورات تفاعلاً، لغة الجمهور."
+                            "تحليل المنافسين وبناء Personas مفصلة للسوق المصري.",
+                            "تطوير Brand Identity جديدة تتناسب مع توجهات السوق.",
+                            "كتابة Messaging Framework واضح لكل شريحة مستهدفة."
                         ],
                         kpis: [
-                            { val: "20", label: "مقابلة مستخدم" },
-                            { val: "3", label: "Personas مفصلة" },
-                            { val: "5", label: "منافسين محللين" }
+                            { val: "100%", label: "هوية جاهزة" },
+                            { val: "3", label: "شرايح عملاء" }
                         ],
-                        deliverables: ["تقرير Market Research"]
+                        deliverables: ["Brand Kit", "Market Insight Report"]
                     },
                     {
                         tag: "شهر 2 — مايو",
-                        title: "الريبراندينج وبناء الهوية البصرية",
+                        title: "بناء التواجد الرقمي والمنصات",
                         tasks: [
-                            "تحديد Brand Positioning رسمي بناءً على نتائج الأبحاث — 'نحن لسنا eBay مصر، نحن منصة تضخيم القيمة'.",
-                            "مراجعة وتطوير الـ Logo، الألوان، والـ Typography — ريبراندينج كامل أو partial بناءً على التحليل.",
-                            "كتابة Brand Voice Guidelines: كيف نتكلم، ما نقوله، ما لا نقوله — بالعربي والإنجليزي.",
-                            "بناء Value Proposition Canvas واضح: ماذا يكسب المستخدم؟ أي ألم نحله بالضبط؟.",
-                            "تطوير Messaging Framework كامل: taglines، headlines، elevator pitch لكل شريحة.",
-                            "وضع Brand Guidelines موثق يُستخدم كمرجع لكل المحتوى القادم."
+                            "تحسين الـ Landing Page وتجهيز حسابات التواصل الاجتماعي.",
+                            "بناء استراتيجية المحتوى للشهر القادم.",
+                            "إعداد أدوات التحليل (GA4, Hotjar) لقياس سلوك المستخدم."
                         ],
                         kpis: [
-                            { val: "1", label: "Brand Kit جاهز" },
-                            { val: "3", label: "رسائل لكل Persona" }
+                            { val: "1", label: "Landing Page" },
+                            { val: "3", label: "منصات تواصل" }
                         ],
-                        deliverables: ["Brand Guidelines Doc", "Messaging Framework"]
-                    },
-                    {
-                        tag: "شهر 3 — يونيو",
-                        title: "بناء الحضور الرقمي والتموضع التنافسي",
-                        tasks: [
-                            "إعداد وتحسين البروفايلات على TikTok، Instagram، LinkedIn بالهوية الجديدة.",
-                            "تحسين الـ Landing Page: نسخ واضحة، CTA قوي، SEO أساسي بالكلمات المفتاحية المستخرجة من البحث.",
-                            "بناء Content Strategy: أعمدة المحتوى، نسبة كل نوع (Entertain / Educate / Inspire).",
-                            "إنشاء Content Calendar للشهر الأول من الـ soft launch (يوليو).",
-                            "تجهيز قوالب التصميم (Templates) لكل منصة بالهوية الجديدة.",
-                            "إعداد Analytics Setup: Meta Pixel، Google Analytics، Hotjar على الـ Landing Page."
-                        ],
-                        kpis: [
-                            { val: "3", label: "منصات جاهزة" },
-                            { val: "30+", label: "قالب محتوى" }
-                        ],
-                        deliverables: ["Content Strategy Doc", "Analytics Dashboard"]
+                        deliverables: ["Content Strategy", "Digital Setup"]
                     }
                 ]
             },
             {
                 tag: "Phase 02",
-                title: "الاختبار والانتشار داخل السوق",
-                duration: "يوليو — سبتمبر 2025 (3 أشهر)",
+                title: "الإطلاق التجريبي والانتشار المحلي",
+                duration: "يونيو — أغسطس 2025 (3 أشهر)",
                 icon: "zap",
-                goal: "اختبار الرسائل والمحتوى على أرض الواقع، بناء أول مجتمع حول التطبيق، والوصول لـ 1,000 مستخدم أولي.",
+                goal: "بدء التواجد على الأرض واختبار المنتج مع أول 1,000 مستخدم حقيقي.",
                 months: [
                     {
-                        tag: "شهر 4 — يوليو",
-                        title: "الإطلاق المحدود — Hyper-Local Seeding",
+                        tag: "شهر 3 — يونيو",
+                        title: "الإطلاق المحدود (Soft Launch)",
                         tasks: [
-                            "إطلاق نظام Invite-Only: الدخول بكود دعوة فقط لخلق FOMO وإدارة النمو.",
-                            "اختيار منطقة أو جامعة واحدة للبدء بها (مثل التجمع أو GUC) — تركيز جغرافي شديد.",
-                            "تجنيد 5–8 'Founding Ambassadors' من الطلاب مقابل شهادات تدريب ومميزات Pro مدى الحياة.",
-                            "Manual Seeding: جمع أول 300–500 منتج على التطبيق من الفريق والدائرة المقربة.",
-                            "تفعيل Founder Story على LinkedIn و TikTok: رحلة البناء بشفافية (Build in Public).",
-                            "بدء نشر المحتوى بانتظام: 4–5 بوستات أسبوعياً بمزيج من Reels وكاروسيلات وستوريز."
+                            "تفعيل نظام الدعوات لخلق ندرة وطلب عالي.",
+                            "بدء برنامج السفراء (Ambassadors) في الجامعات المختارة.",
+                            "إطلاق أول 100 عملية مقايضة حقيقية بالتنسيق مع الفريق."
                         ],
                         kpis: [
-                            { val: "300+", label: "منتج بالتطبيق" },
-                            { val: "8", label: "Ambassadors" },
-                            { val: "200", label: "مستخدم أول" }
+                            { val: "500", label: "مستخدم أولي" },
+                            { val: "5", label: "سفراء نشطين" }
                         ],
-                        deliverables: []
+                        deliverables: ["User Feedback Log"]
                     },
                     {
-                        tag: "شهر 5 — أغسطس",
-                        title: "اختبار المحتوى والانتشار في جروبات",
+                        tag: "شهر 4–5 — يوليو/أغسطس",
+                        title: "توسيع القاعدة الجماهيرية",
                         tasks: [
-                            "اختراق أكبر 10–15 جروب فيسبوك للبيع المستعمل في مصر عبر منشورات Curiosity Hook.",
-                            "A/B Testing للرسائل: اختبار 3–4 angles مختلفة ورصد أيها يجذب أكثر.",
-                            "إطلاق أول #SwapopChallenge: توثيق رحلة مقايضة حقيقية من عنصر صغير على TikTok/Reels.",
-                            "Influencer Bartering: التواصل مع 10 كريتورز بعروض مقايضة بدل دفع كاش.",
-                            "تحليل أداء المحتوى الأول: أي فورمات ينجح، أي رسائل تُحوّل.",
-                            "جمع أول دفعة من User Feedback وترجمتها لتحسينات على المحتوى والمنتج."
+                            "تفعيل Viral Loops داخل التطبيق (ادعُ أصدقاءك).",
+                            "إطلاق تحديات Swapop على TikTok و Instagram Reels.",
+                            "بدء التعاون مع Micro-influencers في مجالات محددة (Tech, Fashion)."
                         ],
                         kpis: [
-                            { val: "500+", label: "مستخدم" },
-                            { val: "3", label: "كريتورز فعّالين" },
-                            { val: "10K+", label: "مشاهدة عضوية" }
+                            { val: "2,500", label: "مستخدم نشط" },
+                            { val: "20", label: "مؤثر شريك" }
                         ],
-                        deliverables: []
-                    },
-                    {
-                        tag: "شهر 6 — سبتمبر",
-                        title: "Viral Loop وتوسيع الانتشار الجغرافي",
-                        tasks: [
-                            "تفعيل Referral Program: 'ادعُ 3 أصدقاء = Boost مجاني لإعلانك' — حافز واضح للمشاركة.",
-                            "توسيع الانتشار لمنطقة أو جامعة ثانية بنفس المنهجية بعد التحقق من النموذج الأول.",
-                            "نشر أول Success Stories: 'أحمد بادل ألعاب قديمة بـ لابتوب' — UGC حقيقي موثق.",
-                            "بدء شراكات B2B مع Coworking Spaces كـ 'Swapop Safe Zones' — حركة لهم، أمان لنا.",
-                            "إعداد أول Monthly Report داخلي: ماذا نجح، ماذا فشل، ماذا نغير."
-                        ],
-                        kpis: [
-                            { val: "1,000+", label: "مستخدم نشط" },
-                            { val: "50+", label: "صفقة مكتملة" },
-                            { val: "2", label: "منطقة جغرافية" }
-                        ],
-                        deliverables: ["تقرير الـ MVP الأول"]
+                        deliverables: ["Influence Campaign Report"]
                     }
                 ]
             },
             {
                 tag: "Phase 03",
-                title: "بناء المجتمع وتسريع النمو",
-                duration: "أكتوبر — نوفمبر 2025 (شهران)",
-                icon: "users",
-                goal: "كسر حاجز الـ 10K مستخدم، بناء مجتمعات متخصصة داخل التطبيق، وتحويل المستخدمين الراضين إلى سفراء.",
+                title: "النمو المتسارع والإطلاق الكامل",
+                duration: "سبتمبر — ديسمبر 2025 (4 أشهر)",
+                icon: "target",
+                goal: "الوصول للهدف النهائي 10,000 مستخدم وترسيخ العلامة التجارية كأكبر منصة مقايضة.",
                 months: [
                     {
-                        tag: "شهر 7–8 — أكتوبر/نوفمبر",
-                        title: "Community Building وتوسيع فريق الكريتورز",
+                        tag: "شهر 6–7 — سبتمبر/أكتوبر",
+                        title: "بناء المجتمع (Community Scaling)",
                         tasks: [
-                            "إطلاق 'Swap Days' أسبوعية: يوم تقنية، يوم ملابس، يوم كتب — تجميع متخصص للمهتمين.",
-                            "بناء فريق UGC أكبر: تجنيد 20–30 كريتور صغير يصنعون محتوى أصيلاً مقابل مميزات.",
-                            "إطلاق برنامج Community Leaders: قادة يديرون جروبات متخصصة ويكسبون نسبة من الصفقات.",
-                            "توسيع الحضور الجغرافي: مدن جديدة بنفس منهجية الـ Ambassador (الإسكندرية، المنصورة).",
-                            "حملة UGC Success Stories منظمة: 4–5 قصص نجاح موثقة شهرياً على كل المنصات.",
-                            "تحسين Onboarding Flow بناءً على بيانات الـ 3 أشهر الماضية — تقليل الـ Drop-off.",
-                            "بدء بناء Email List + مجتمع WhatsApp للمستخدمين الأكثر نشاطاً."
+                            "إطلاق Swap Days في محافظات مختلفة لزيادة الثقة.",
+                            "تحويل المستخدمين الأكثر نشاطاً إلى قادة مجتمعات داخلية.",
+                            "تحسين تجربة المستخدم بناءً على بيانات الـ Soft Launch."
                         ],
                         kpis: [
-                            { val: "5,000+", label: "مستخدم" },
-                            { val: "30", label: "كريتور نشط" },
-                            { val: "3", label: "مدن مغطاة" }
+                            { val: "6,000", label: "مستخدم" },
+                            { val: "10", label: "فعاليات Swap" }
                         ],
                         deliverables: ["Community Playbook"]
-                    }
-                ]
-            },
-            {
-                tag: "Phase 04",
-                title: "الإطلاق الرسمي والتجهيز للـ Scale",
-                duration: "ديسمبر 2025 — مارس 2026 (4 أشهر)",
-                icon: "target",
-                goal: "الوصول لـ 15K–25K مستخدم، بناء قصة نجاح قابلة للقياس، والإطلاق الرسمي الكامل مع ضجة إعلامية.",
-                months: [
-                    {
-                        tag: "شهر 9–10 — ديسمبر/يناير",
-                        title: "العلاقات العامة والـ Pre-Launch Buzz",
-                        tasks: [
-                            "إطلاق حملة PR مدفوعة بأرقام حقيقية: التواصل مع Wamda، Startup Scene، Enterprise Egypt.",
-                            "زاوية الخبر: 'تطبيق مصري بـ صفر ميزانية يجذب 10K+ مستخدم بالذكاء الاصطناعي'.",
-                            "إطلاق قائمة انتظار (Waitlist) للإطلاق الرسمي — خلق FOMO واسع قبل الـ Full Launch.",
-                            "تحضير Launch Kit كامل: Press Kit، Demo Videos، Testimonials، Key Metrics.",
-                            "تفعيل شراكات مؤسسية: حاضنات، شركات ناشئة، مساحات عمل مشترك كـ Partners رسميين."
-                        ],
-                        kpis: [
-                            { val: "10K+", label: "مستخدم" },
-                            { val: "5", label: "مقالات صحفية" },
-                            { val: "2,000+", label: "Waitlist" }
-                        ],
-                        deliverables: []
                     },
                     {
-                        tag: "شهر 11–12 — فبراير/مارس",
-                        title: "الإطلاق الرسمي الكامل + الاستعداد للربحية",
+                        tag: "شهر 8–9 — نوفمبر/ديسمبر",
+                        title: "الإطلاق الرسمي والوصول لـ 10K",
                         tasks: [
-                            "حدث إطلاق رسمي (Launch Event) — حضوري أو أونلاين — بتغطية إعلامية.",
-                            "فتح التطبيق للعموم: رفع Invite-Only ونشر واسع عبر كل القنوات في نفس الوقت.",
-                            "إطلاق أول حملة مدفوعة صغيرة إن توفرت ميزانية (Retargeting للـ Waitlist أساساً).",
-                            "Pre-announcement لـ Swapop Pro: 'المستخدمون الأوائل يحصلون على 3 أشهر مجاناً'.",
-                            "إعداد Investor Deck محدث بالأرقام الحقيقية من الـ 12 شهر الماضية.",
-                            "وضع خطة Q1 للسنة الثانية: Market Penetration وبداية تفعيل الـ Revenue Streams."
+                            "حملة PR واسعة في المواقع التقنية والشبابية.",
+                            "إطلاق ميزات Pro للمستخدمين الأوائل مجاناً لفترة محدودة.",
+                            "تحليل النتائج النهائية وتجهيز خطة التوسع لعام 2026."
                         ],
                         kpis: [
-                            { val: "25K", label: "مستخدم مسجل" },
-                            { val: "1", label: "Launch Event" },
-                            { val: "Pro", label: "جاهز للإطلاق" }
+                            { val: "10,000", label: "مستخدم مسجل" },
+                            { val: "1", label: "Full Launch" }
                         ],
-                        deliverables: ["Investor Deck محدث", "Year 2 Roadmap"]
+                        deliverables: ["Investor Deck", "2026 Expansion Plan"]
                     }
                 ]
             }
@@ -424,7 +315,7 @@
 
         function renderSidebar() {
             const container = document.getElementById('sidebar');
-            let html = `<h3 class="text-sm font-black text-slate-400 uppercase tracking-widest px-2 mb-4">المراحل الأربعة</h3>`;
+            let html = `<h3 class="text-sm font-black text-slate-400 uppercase tracking-widest px-2 mb-4">المراحل الثلاث</h3>`;
 
             phases.forEach((phase, idx) => {
                 const isActive = activePhase === idx;
